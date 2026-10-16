@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artist & Writer Profile</title>
+    <title>Q1n Profileeeee</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome Icons -->
@@ -30,7 +30,7 @@
         <section class="bg-white/80 backdrop-blur-md border border-rose-100 rounded-2xl p-6 shadow-sm text-center relative overflow-hidden">
             <!-- Avatar -->
             <div class="w-24 h-24 mx-auto mb-4 relative">
-                <img id="profile-avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=300&auto=format&fit=crop" 
+                <img id="profile-avatar" src="https://yt3.googleusercontent.com/qd0ScliDYW-bjAPjQ0lxoOM9yZpk5vsjjI15ORAynr3v3C6HJ6YK8fgaIuDedgg4TIoaqoc5dg=s160-c-k-c0x00ffffff-no-rj" 
                      alt="Avatar" 
                      class="w-full h-full object-cover rounded-full border-2 border-rose-200 shadow-sm">
             </div>
@@ -44,13 +44,24 @@
             </p>
 
             <!-- Social Links -->
-            <div class="flex justify-center gap-3 mt-5">
-                <a href="https://github.com" target="_blank" class="w-8 h-8 rounded-full bg-slate-100 hover:bg-rose-100 text-slate-600 hover:text-rose-500 flex items-center justify-center text-sm transition">
-                    <i class="fa-brands fa-github"></i>
+            <div class="flex justify-center flex-wrap gap-3 mt-5">
+                <!-- Facebook -->
+                <a href="https://facebook.com/pleasedontDNImeimsosorry" target="_blank" title="Facebook" class="w-9 h-9 rounded-full bg-slate-100 hover:bg-rose-100 text-slate-600 hover:text-rose-500 flex items-center justify-center text-base transition">
+                    <i class="fa-brands fa-facebook-f"></i>
                 </a>
-                <a href="https://facebook.com" target="_blank" class="w-8 h-8 rounded-full bg-slate-100 hover:bg-rose-100 text-slate-600 hover:text-rose-500 flex items-center justify-center text-sm transition">
-                    <i class="fa-brands fa-facebook"></i>
+                <!-- TikTok -->
+                <a href="https://tiktok.com/@imnotgoodpeople14" target="_blank" title="TikTok" class="w-9 h-9 rounded-full bg-slate-100 hover:bg-rose-100 text-slate-600 hover:text-rose-500 flex items-center justify-center text-base transition">
+                    <i class="fa-brands fa-tiktok"></i>
                 </a>
+                <!-- X / Twitter -->
+                <a href="https://x.com/Coilshotboard1n" target="_blank" title="X (Twitter)" class="w-9 h-9 rounded-full bg-slate-100 hover:bg-rose-100 text-slate-600 hover:text-rose-500 flex items-center justify-center text-base transition">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <!-- Discord -->
+                <div title="Discord: Q1nabc" class="h-9 px-3.5 rounded-full bg-slate-100 text-slate-600 flex items-center gap-1.5 text-xs font-medium border border-transparent hover:border-rose-200 transition">
+                    <i class="fa-brands fa-discord text-base"></i>
+                    <span>Q1nabc</span>
+                </div>
             </div>
         </section>
 
@@ -133,7 +144,7 @@
 
         let isAdmin = false;
 
-        // Default Posts if local storage is empty
+        // Default Posts
         const initialPosts = [
             {
                 id: 1,
@@ -194,7 +205,6 @@
         function toggleAdminModal() {
             const modal = document.getElementById('login-modal');
             if (isAdmin) {
-                // If logged in, scrolling or clicking admin toggle toggles panel focus
                 document.getElementById('admin-panel').scrollIntoView({ behavior: 'smooth' });
             } else {
                 modal.classList.toggle('hidden');
@@ -213,7 +223,6 @@
                 errorMsg.classList.add('hidden');
                 toggleAdminModal();
                 
-                // UI Updates for Admin
                 document.getElementById('admin-panel').classList.remove('hidden');
                 document.getElementById('admin-btn-text').textContent = 'Admin Mode';
                 document.getElementById('admin-toggle-btn').classList.add('bg-rose-200', 'text-rose-700');
@@ -253,7 +262,6 @@
             posts.unshift(newPost);
             localStorage.setItem('yuri_posts', JSON.stringify(posts));
 
-            // Reset form & re-render
             document.getElementById('post-form').reset();
             renderPosts();
         }
